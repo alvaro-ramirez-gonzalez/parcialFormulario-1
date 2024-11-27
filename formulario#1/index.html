@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro de Programa Académico</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
+        <div class="text-center mb-6">
+        
+            <h2 class="text-2xl font-bold mt-4">Registro de programa académico</h2>
+        </div>
+        <form id="registro-form">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label for="nombre-programa" class="block text-sm font-semibold">Nombre Del Programa *</label>
+                    <input type="text" id="nombre-programa" class="w-full p-3 border border-gray-300 rounded-md mt-2" required>
+                </div>
+                <div>
+                    <label for="nombre-abreviado" class="block text-sm font-semibold">Nombre Abreviado</label>
+                    <input type="text" id="nombre-abreviado" class="w-full p-3 border border-gray-300 rounded-md mt-2">
+                </div>
+                <div>
+                    <label for="codigo-institucional" class="block text-sm font-semibold">Código Institucional *</label>
+                    <input type="text" id="codigo-institucional" class="w-full p-3 border border-gray-300 rounded-md mt-2" required>
+                </div>
+                <div>
+                    <label for="nivel-formacion" class="block text-sm font-semibold">Nivel De Formación *</label>
+                    <select id="nivel-formacion" class="w-full p-3 border border-gray-300 rounded-md mt-2" required>
+                        <option value="">Seleccionar...</option>
+                        <option value="Pregrado">Pregrado</option>
+                        <option value="Posgrado">Posgrado</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="programa-academico" class="block text-sm font-semibold">Programa Académico *</label>
+                    <input type="text" id="programa-academico" class="w-full p-3 border border-gray-300 rounded-md mt-2" required>
+                </div>
+                <div>
+                    <label for="snie" class="block text-sm font-semibold">SNIES</label>
+                    <input type="text" id="snie" class="w-full p-3 border border-gray-300 rounded-md mt-2">
+                </div>
+                <div>
+                    <label for="coordinador-academico" class="block text-sm font-semibold">Coordinador Académico *</label>
+                    <select id="coordinador-academico" class="w-full p-3 border border-gray-300 rounded-md mt-2" required>
+                        <option value="">Seleccionar...</option>
+                        <option value="Coordinador 1">Coordinador 1</option>
+                        <option value="Coordinador 2">Coordinador 2</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="estado" class="block text-sm font-semibold">Estado *</label>
+                    <select id="estado" class="w-full p-3 border border-gray-300 rounded-md mt-2" required>
+                        <option value="">Seleccionar...</option>
+                        <option value="Activo">Activo</option>
+                        <option value="Inactivo">Inactivo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex items-center mt-4">
+                <input type="checkbox" id="realizar-practicas" class="mr-2">
+                <label for="realizar-practicas" class="text-sm font-semibold">Realizar prácticas</label>
+            </div>
+            <div class="flex items-center mt-4">
+                <label for="duracion" class="text-sm font-semibold mr-2">Duración</label>
+                <input type="number" id="duracion" class="w-20 p-3 border border-gray-300 rounded-md" placeholder="X" required>
+                <span class="ml-2">Meses</span>
+            </div>
+            <div class="text-center mt-6">
+                <button type="submit" class="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Agregar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
